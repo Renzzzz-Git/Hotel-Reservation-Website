@@ -12,21 +12,22 @@
 	<div class="wrapper">
 		<section class="form login">
 			<header>Hotel Reservation System</header>
-			<form action="#">
+			<form method="POST">
 				<div class="name-details">
 					<div class="field input">
-						<label>Email Address</label>
-						<input type="text" placeholder="Enter your email" required>
+						<label>Username</label>
+						<input type="text" placeholder="Enter your username" name="username" required>
 					</div>
 					<div class="field input">
 						<label>Password</label>
-						<input type="password" placeholder="Enter your password" required>
+						<input type="password" name="password" placeholder="Enter your password" required>
 					</div>
 					<div class="field button">
-						<input type="submit" value="Login" >
+						<input type="submit" value="Login" name="login" >
 					</div>
 				</div>
 			</form>
+			<?php require_once 'Php/login.php'?>
 		</section>
 		
 	</div>
