@@ -43,3 +43,4 @@ if(!isset($_SESSION['username'])){
 	<div>Click here to<a href="../Php/logout.php"> Logout</a></div>
 </body>
 </html>
+
