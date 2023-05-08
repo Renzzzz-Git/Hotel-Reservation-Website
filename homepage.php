@@ -25,7 +25,7 @@
 
  
     <li id="name"><a href="#hotel">Home</a></li>
-    <li class="font1" style="float:right"><a href="#login">Login</a></li>
+    <li class="font1" style="float:right"><a href="login_Prompt.php">Login</a></li>
     <li class="font1" style="float:right"><a href="#newsfeed">News Feed</a></li>
     
   </ul>

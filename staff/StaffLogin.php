@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-if(!isset($_SESSION['username'])){
-	header('location:../homepage.php');
-	
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,33 +5,31 @@ if(!isset($_SESSION['username'])){
 	<meta name="viewport" content="width=device-width, intitial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Hotel Reservation System</title>
-	<link href="../css/chat.css"  rel = "stylesheet" type = "text/css" >
+	<link href="../css/login.css"  rel = "stylesheet" type = "text/css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
 	<div class="wrapper">
 		<section class="form login">
-			<header>Welcome <?php echo $_SESSION['username']; ?></header>
-			<form method="post">
+			<header>Staff Login</header>
+			<form method="POST">
 				<div class="name-details">
 					<div class="field input">
-						<label>Email Address</label>
-						<input type="text" placeholder="Enter your email" required>
+						<label>Username</label>
+						<input type="text" placeholder="Enter your username" name="username" required>
 					</div>
 					<div class="field input">
 						<label>Password</label>
-						<input type="password" placeholder="Enter your password" required>
+						<input type="password" name="password" placeholder="Enter your password" required>
 					</div>
 					<div class="field button">
-						<input type="submit" value="Login" >
+						<input type="submit" value="Login" name="staff_login" >
 					</div>
 				</div>
 			</form>
+			<?php require_once '../Php/login.php'?>
 		</section>
 		
 	</div>
-
-	<div>Click here to<a href="../Php/logout.php"> Logout</a></div>
 </body>
 </html>
-
