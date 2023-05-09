@@ -12,7 +12,7 @@
 <head>
 
 
-  <link rel="stylesheet" href="css/homepages.css">
+  <link rel="stylesheet" href="css/homepage.css">
 
 
 
