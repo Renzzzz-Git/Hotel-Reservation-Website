@@ -1,0 +1,11 @@
+Members( First Name, Last Name, Username, password, Contact Number, Arrival Date, Departure date, No. of Pax)
+
+Employees(First Name, Last Name, Contact Number, Time in, Time out)
+
+Room(Room type, Room number, room price, room floor, room category, room status)
+
+Reservation(Room number, member id, room id, status, days, checkin time, checkin date, checkout date, checkout time)
+
+Bill(member name, Room price, reservation days)
+
+Messages(msg_id, incoming_msg_id, msg)
