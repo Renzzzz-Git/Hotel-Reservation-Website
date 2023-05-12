@@ -1,7 +1,7 @@
 <?php
     session_start();
     date_default_timezone_set('Asia/Manila');
-    $timeDate = $_POST['time_in'];
+    $timeDate = date("Y-m-d H:i:s");
     $username = $_SESSION['username'];
 
     $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
