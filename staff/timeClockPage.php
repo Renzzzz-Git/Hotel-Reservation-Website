@@ -7,18 +7,6 @@
     }
 ?>
 
-<script>
-
-        function disableButton1() {
-            document.getElementById("button1").setAttribute('disabled',true)
-            //document.getElementById("button2").setAttribute('disabled',false)
-        }
-
-        function disableButton2() {
-            document.getElementById("button2").disabled = true;
-            document.getElementById("button1").disabled = false;
-        }
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
