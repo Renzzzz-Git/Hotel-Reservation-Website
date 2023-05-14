@@ -1,12 +1,13 @@
 <?php
-session_start();
+	session_start();
 
-if(!isset($_SESSION['username'])){
-	header('location:../homepage.php');
-	
-}
+    if(!isset($_SESSION['username'])){
+        header('location:../homepage.php');
+        
+    }
 ?>
 
+<?php include 'viewMessages.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,27 +21,37 @@ if(!isset($_SESSION['username'])){
 <body>
 	<div class="wrapper">
 		<section class="form login">
-			<header>Welcome <?php echo $_SESSION['username']; ?></header>
-			<form method="post">
+			<header>Customer Chat Service </header> 
+			<br>
+			<a href="chat.php"><button>Refresh Messages</button></a> <a href="../Php/logout.php"><button>Logout</button></a>
+			<br><br>
+			<div class="chatwrap">
+				<div class="messagesWrap">
+					<?php 
+							foreach($fetch as $message)
+							{
+								echo "<br>" . $message['1'] . "<br>";
+							}
+
+						?>
+				</div>
+
+				
+			</div>
+			<form action="sendMessages.php" method="POST" enctype="multipart/form-data" autocomplete="off">
 				<div class="name-details">
 					<div class="field input">
-						<label>Email Address</label>
-						<input type="text" placeholder="Enter your email" required>
-					</div>
-					<div class="field input">
-						<label>Password</label>
-						<input type="password" placeholder="Enter your password" required>
+						<input type="text" name="message" id="message" placeholder="Enter your message" required>
 					</div>
 					<div class="field button">
-						<input type="submit" value="Login" >
+						<input type="submit" value="Submit"  >
 					</div>
 				</div>
 			</form>
-		</section>
-		
-	</div>
 
-	<div>Click here to<a href="../Php/logout.php"> Logout</a></div>
+
+			
+		</section>
+	</div>
 </body>
 </html>
-

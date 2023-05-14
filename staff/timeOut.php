@@ -16,6 +16,7 @@
 
     $overtime = date("Y-m-d H:i:s", strtotime(strval($sched_timeout) . ' + 2 hours'));
     $update_timeOut = "UPDATE employees SET `time_out`='$timeDate' WHERE `emp_id`= '$id'";
+    $update_timeRecord = "UPDATE timerecord SET `time_out`='$timeDate' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
     $null = "UPDATE employees SET `time_in`='0000-00-00 00:00:00' WHERE `emp_id`= '$id'";
     
     if(strtotime($timeDate) > strtotime($time_in) && strtotime($timeDate) < strtotime($overtime)){
@@ -30,6 +31,7 @@
         $sql = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = `$time_in`";
         $null = "UPDATE employees SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id'";  
         $update_timeOut = "UPDATE employees SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id'";
+        $update_timeRecord = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
     }
 
     if ($conn->query($sql) === TRUE) {
@@ -50,6 +52,11 @@
        echo "Error updating record: " . $conn->error;
     }
     
+    if ($conn->query($update_timeRecord) === TRUE) {
+        echo "Record updated successfully";
+    } else {
+       echo "Error updating record: " . $conn->error;
+    }
     
     $conn->close();
     header('location:timeClockPage.php');

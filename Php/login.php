@@ -11,11 +11,13 @@
 		
 		if($row > 0){
 			$_SESSION['username'] = $fetch['username'];
+			$_SESSION['member_id'] = $fetch['member_id'];
 			header('location:chat.php');
 		}else{
 			echo "<center><label style = 'color:red;'>Invalid username or password</label></center>";
 		}
 	}
+
 
 
 

@@ -12,7 +12,7 @@
     $sql = "UPDATE employees SET `time_in`='$timeDate' WHERE `emp_id`= '$id'";
     $null = "UPDATE employees SET `time_out`='0000-00-00 00:00:00' WHERE `emp_id`= '$id'";
     $Out_time = '0000-00-00 00:00:00';
-    $timeIn_Out = "INSERT INTO `timerecord` (time_id, time_in, time_out, emp_id) VALUES ('$time_id', '$time_in', '$Out_time', '$id')";
+    $timeIn_Out = "INSERT INTO `timerecord` (time_id, time_in, time_out, emp_id) VALUES ('$time_id', '$timeDate', '$Out_time', '$id')";
     
     if ($conn->query($sql) === TRUE && $conn->query($null) === TRUE) {
         echo "Record updated successfully";
