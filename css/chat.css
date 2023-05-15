@@ -25,6 +25,7 @@ body{
                 0 32px 64px -48px rgba(0,0,0,0.5);              
 }
 
+
 .chatwrap{
     background: #e6e3e3;
     justify-content: center;
@@ -33,8 +34,29 @@ body{
     border-radius: 16px;
 }
 
-.messagesWrap{
-    height:290px;width:930px;padding:20px; #ccc;font-family: 'Poppins', sans-serif;overflow:auto;
+.userswrap{
+    background: #fff;
+    width: 500px;
+    height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);   
+}
+
+.userScrollBox{
+    height:290px;
+    width:400px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+
+.scrollBox{
+    height:290px;
+    width:930px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
 }
 
 

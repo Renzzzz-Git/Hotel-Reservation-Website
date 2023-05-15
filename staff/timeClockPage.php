@@ -40,6 +40,7 @@
 	</form>
 
     <div>Click here to<a href="../Php/logout.php"> Logout</a></div>
+    <div>Staff Chat To Members<a href="chatusers.php"> Chat</a></div>
     
     <br><br><br>
 

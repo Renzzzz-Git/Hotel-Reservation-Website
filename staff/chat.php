@@ -5,32 +5,42 @@
         header('location:../homepage.php');
         
     }
+
+   
 ?>
+
+
 
 <?php include 'viewMessages.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, intitial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Hotel Reservation System</title>
-	<link href="../css/chat.css"  rel = "stylesheet" type = "text/css" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../css/chat.css"  rel = "stylesheet" type = "text/css" >
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body>
-	<div class="wrapper">
+<div class="wrapper">
 		<section class="form login">
-			<header>Customer Chat Service </header> 
+			<header>Staff Chat Service </header> 
 			<br>
-			<a href="chat.php"><button>Refresh Messages</button></a> <a href="../Php/logout.php"><button>Logout</button></a>
-			<br><br>
+			<p>Note: Refresh Browser to update messages</p><a href="../Php/logout.php"><button>Logout</button></a>
+			<?php
+    
+    echo 'Your ID:' . $_GET['memberid'];
+
+?>
+            <br><br>
 			<div class="chatwrap">
 				<div class="scrollBox">
 					<?php 
 							foreach($fetch as $message)
 							{
-								echo "<br>" . $message['1'] . "<br>";
+								echo "<br>" . $message['1'] . "
+                                <p>Reply: " . "<input type=\"text\" name=\"message\" id=\"message\" value=\"" . $message['2'] . "\"" . ">" . "</p><br>";
 							}
 
 						?>
@@ -53,5 +63,8 @@
 			
 		</section>
 	</div>
+        
+
+    <a href="chatusers.php">Go back</a>
 </body>
 </html>
