@@ -31,6 +31,7 @@
 							foreach($fetch as $message)
 							{
 								echo "<br>" . $message['1'] . "<br>";
+								echo "Reply: " . $message['2'] . "<br>";
 							}
 
 						?>

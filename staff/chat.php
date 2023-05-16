@@ -27,40 +27,36 @@
 		<section class="form login">
 			<header>Staff Chat Service </header> 
 			<br>
-			<p>Note: Refresh Browser to update messages</p><a href="../Php/logout.php"><button>Logout</button></a>
+			<p>Note: Refresh Browser to update messages</p>
+			<a href="chatusers.php"><button>Go back to Chat Users</button></a>
+			<a href="../Php/logout.php"><button>Logout</button></a>
 			<?php
     
     echo 'Your ID:' . $_GET['memberid'];
 
-?>
+		?>
             <br><br>
+            
 			<div class="chatwrap">
 				<div class="scrollBox">
 					<?php 
 							foreach($fetch as $message)
 							{
-								echo "<br>" . $message['1'] . "
-                                <p>Reply: " . "<input type=\"text\" name=\"message\" id=\"message\" value=\"" . $message['2'] . "\"" . ">" . "</p><br>";
+								echo "<br> <label>Message: </label>" . $message['1'] . "
+                                <form action=\"updateReply.php\" method=\"POST\" enctype=\"multipart/form-data\" autocomplete=\"off\">
+									<p>Reply: " . "<input type=\"text\" name=\"reply\" id=\"reply\" value=\"" . $message['2'] . "\"" . ">" . "</p>
+									<input type=\"submit\" value=\"Update\">
+									<input type=\"hidden\" name=\"messageID\" value=\"" . $message['0'] . "\">
+									<input type=\"hidden\" name=\"memberid\" value=\"" . $_GET['memberid'] . "\">
+                                </form>
+                                <br>";
 							}
 
 						?>
 				</div>
 
 				
-			</div>
-			<form action="sendMessages.php" method="POST" enctype="multipart/form-data" autocomplete="off">
-				<div class="name-details">
-					<div class="field input">
-						<input type="text" name="message" id="message" placeholder="Enter your message" required>
-					</div>
-					<div class="field button">
-						<input type="submit" value="Submit"  >
-					</div>
-				</div>
-			</form>
-
-
-			
+			</div>		
 		</section>
 	</div>
         
