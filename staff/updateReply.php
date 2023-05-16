@@ -1,7 +1,7 @@
 <?php
         $reply = $_POST['reply'];
         $msg_id = $_POST['messageID']; 
-        $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system');
+        $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel');
 
         $sql = "UPDATE `message` SET `reply`='$reply' WHERE `msg_id`= '$msg_id'";
 

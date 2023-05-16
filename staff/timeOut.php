@@ -6,7 +6,7 @@
   
     $username = $_SESSION['username'];
 
-    $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
+    $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
     $query = $conn->query("SELECT * FROM `employees` WHERE `username` = '$username'") or die(mysqli_error());
     $fetch = $query->fetch_array();
     $id = $fetch['emp_id'];

@@ -4,7 +4,7 @@
     $datetime = date("Y-m-d H:i:s");
     
     //For Fetching data of the current TimeIn and TimeOut of staff members
-    $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
+    $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
     $query = $conn->query("SELECT * FROM `employees` WHERE `username` = '$username'") or die(mysqli_error());
 		$fetch = $query->fetch_array();
     $get_timeIn = $fetch['time_in'];

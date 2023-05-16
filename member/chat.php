@@ -23,7 +23,7 @@
 		<section class="form login">
 			<header>Customer Chat Service </header> 
 			<br>
-			<a href="chat.php"><button>Refresh Messages</button></a> <a href="../Php/logout.php"><button>Logout</button></a>
+			<a href="chat.php"><button>Refresh Messages</button><a href="Reservation.php"><button>Go To Reservation</button></a> <a href="../Php/logout.php"><button>Logout</button></a>
 			<br><br>
 			<div class="chatwrap">
 				<div class="scrollBox">
