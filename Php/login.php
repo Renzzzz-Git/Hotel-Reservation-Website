@@ -26,7 +26,7 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
         session_start();
-        $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
+        $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
 		$query = $conn->query("SELECT * FROM `employees` WHERE `username` = '$username' && `password` = '$password'") or die(mysqli_error());
 		$fetch = $query->fetch_array();
 		$row = $query->num_rows;

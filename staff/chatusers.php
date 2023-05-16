@@ -25,6 +25,7 @@
 		<section class="form login">
 			<header>Customer Chat Service </header> 
 			<br>
+			<a href="timeClockPage.php"><button>Go back to Time-in</button></a>
 			<a href="../Php/logout.php"><button>Logout</button></a>
 			<br><br>
 

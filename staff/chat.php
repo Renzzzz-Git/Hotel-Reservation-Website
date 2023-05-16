@@ -60,7 +60,5 @@
 		</section>
 	</div>
         
-
-    <a href="chatusers.php">Go back</a>
 </body>
 </html>
