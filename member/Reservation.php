@@ -7,6 +7,7 @@
     }
 ?>
 
+<?php include 'reservationCheckDB.php'?>
 
 <!--- HTML --->
 
@@ -57,8 +58,19 @@
       background-color: #45a049;
     }
   </style>
+  <link rel="stylesheet" href="../css/homepage.css">
 </head>
 <body>
+
+<ul>
+  <li id="name"><a href="Memberhomepage.php">Home</a></li>
+  <li id="name"><a href="Reservation.php">Reservation</a></li>
+  <li id="name"><a href="chat.php">Chat</a></li>
+  <li id="name"><a href="#rate">Ratings</a></li>
+  <li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
+  <li class="font1" style="float:right"><a href="#newsfeed">News Feed</a></li>
+  <li class="font1" style="float:right"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
+</ul>
   <h2>Hotel Reservation</h2>
   <form method="POST" action="reservationDB_conn.php">
     <div class="form-group">
@@ -121,9 +133,7 @@
 
     <button type="submit">Submit</button>
   </form>
-  <br>
-  <a href="chat.php"><button>Chat</button></a>
-  <a href="../Php/logout.php"><button>Logout</button></a>
+
 </body>
 </html>
 

@@ -95,6 +95,8 @@ li a:hover:not(.active) {
 
 }
 
+
+
 .links{
     color: #533C1D;
     text-decoration-line: none;
@@ -116,4 +118,9 @@ li a:hover:not(.active) {
   top: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.disable-link {
+  pointer-events: none;
 }

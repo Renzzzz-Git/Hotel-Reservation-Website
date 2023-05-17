@@ -1,12 +1,3 @@
-<?php
-
-
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +8,7 @@
 
 
 
-</style>
+<style></style>
 </head>
 <body>
 

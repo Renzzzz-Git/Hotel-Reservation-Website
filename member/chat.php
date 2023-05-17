@@ -8,6 +8,7 @@
 ?>
 
 <?php include 'viewMessages.php'?>
+<?php include 'reservationCheckDB.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +17,34 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Hotel Reservation System</title>
 	<link href="../css/chat.css"  rel = "stylesheet" type = "text/css" >
+	<link href="../css/homepage.css"  rel = "stylesheet" type = "text/css" >
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
+
 <body>
+	<ul>
+		<li id="name"><a href="Memberhomepage.php">Home</a></li>
+		<li id="name"><a href="Reservation.php">Reservation</a></li>
+		<li id="name"><a href="chat.php">Chat</a></li>
+		<li id="name"><a href="#Rate">Ratings</a></li>
+		<li class="font1"><a href="#newsfeed">News Feed</a></li>
+		<li id="name"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
+		<li class="font1"><a href="../Php/logout.php">Logout</a></li>
+	</ul>
+
+
 	<div class="wrapper">
 		<section class="form login">
 			<header>Customer Chat Service </header> 
 			<br>
-			<a href="chat.php"><button>Refresh Messages</button><a href="Reservation.php"><button>Go To Reservation</button></a> <a href="../Php/logout.php"><button>Logout</button></a>
+			<a href="chat.php"><button>Refresh Messages</button>
+			 <a href="../Php/logout.php"><button>Logout</button></a>
 			<br><br>
 			<div class="chatwrap">
 				<div class="scrollBox">
 					<?php 
-							foreach($fetch as $message)
+							foreach($msg as $message)
 							{
 								echo "<br><br> Message: " .  $message['1'] . "<br>";
 								echo "Reply: " . $message['2'] . "<br><br>";
