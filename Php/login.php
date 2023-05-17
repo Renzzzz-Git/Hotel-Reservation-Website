@@ -38,4 +38,23 @@
 			echo "<center><label style = 'color:red;'>Invalid username or password</label></center>";
 		}
 	}
+
+
+	//LOGIN CODE FOR CONNECTING STAFF TO DATABASE
+	if(ISSET ($_POST['admin_login'])){
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+        session_start();
+        $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
+		$query = $conn->query("SELECT * FROM `admin` WHERE `username` = '$username' && `password` = '$password'") or die(mysqli_error());
+		$fetch = $query->fetch_array();
+		$row = $query->num_rows;
+		
+		if($row > 0){
+			$_SESSION['username'] = $fetch['username'];
+			header('location:code for record input, display, and delete for the admin account.php');
+		}else{
+			echo "<center><label style = 'color:red;'>Invalid username or password</label></center>";
+		}
+	}
 ?>

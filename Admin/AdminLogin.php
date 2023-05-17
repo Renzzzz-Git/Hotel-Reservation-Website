@@ -23,7 +23,7 @@
 						<input type="password" name="password" placeholder="Enter your password" required>
 					</div>
 					<div class="field button">
-						<input type="submit" value="Login" name="login" >
+						<input type="submit" value="Login" name="admin_login" >
 					</div>
 				</div>
 			</form>

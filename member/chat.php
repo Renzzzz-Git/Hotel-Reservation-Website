@@ -30,8 +30,8 @@
 					<?php 
 							foreach($fetch as $message)
 							{
-								echo "<br>" . $message['1'] . "<br>";
-								echo "Reply: " . $message['2'] . "<br>";
+								echo "<br><br> Message: " .  $message['1'] . "<br>";
+								echo "Reply: " . $message['2'] . "<br><br>";
 							}
 
 						?>
@@ -45,7 +45,7 @@
 						<input type="text" name="message" id="message" placeholder="Enter your message" required>
 					</div>
 					<div class="field button">
-						<input type="submit" value="Submit"  >
+						<input type="submit" value="Send"  >
 					</div>
 				</div>
 			</form>

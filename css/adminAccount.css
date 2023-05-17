@@ -1,0 +1,96 @@
+.operationsBox{
+  background-color: white;
+  width: 300px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}
+
+.box1{
+  background-color: white;
+  width: 200px;
+  border: 15px solid green;
+  padding: 30px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.box2{
+  background-color: white;
+  width: 200px;
+  border: 15px solid green;
+  padding: 30px;
+  margin: 0px;
+
+}
+
+.tableHeader{
+  background-color: darkgreen;
+  color: white;
+}
+
+.secondTable{
+    margin-left: 300px;
+    width: auto;
+}
+
+.displayTable{
+    margin-right: auto;
+    margin-left: auto;
+    width: 900px;
+}
+
+.promptBox{
+  background-color: white;
+  width: 500px;
+  border: 15px solid green;
+  padding: 40px;
+  margin: auto;
+}
+
+.centerBox{
+  background-color: white;
+  width: 600px;
+  border: 10px solid darkgreen;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+.logo{
+  width: 200px;
+  height: 120px;
+  position: absolute;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+  color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: black;
+}
+
