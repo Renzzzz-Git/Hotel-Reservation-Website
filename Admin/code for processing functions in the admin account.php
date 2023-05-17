@@ -41,10 +41,11 @@ if (mysqli_query($connectionKeys, $sqlQuery)) {
         <p><b>Title: </b><?php echo $newsEventTitle;?></p>
         <p><b>Date: </b><?php echo $newsEventDate;?></p>
         <p><b>Description: </b><?php echo $newsEventDescription;?></p>
-        <p><b>Image:<br></b><center><?php echo "<img src=". $imagePath ." height=300 width=400 />";?></center></p>
+        <p><b>Image:<br></b><center><img src='<?php echo $imagePath?>' height=300 width=400 /></center></p>
         <br>
 
         <p>This News/Event record was <b>published successfully...</b></p>
+        
 
 
         <form action="code for record input, display, and delete for the admin account.php">

@@ -111,7 +111,7 @@ if (mysqli_num_rows($result) > 0) {
    <td><center><?php echo $data['Title']; ?></center></td>
    <td><center><?php echo $data['NEDate']; ?></center></td>
    <td><center><?php echo $data['Description']; ?></center></td>
-   <td><center><?php echo "<img src= images/" . $data['Image'] ." height=150 width=200 />"; ?></center></td>
+   <td><center><?php echo "<img src= 'images/" . $data['Image'] ."' height=150 width=200 />"; ?></center></td>
  </tr>
 
 <?php 
