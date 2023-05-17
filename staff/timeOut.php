@@ -21,14 +21,14 @@
     
     if(strtotime($timeDate) > strtotime($time_in) && strtotime($timeDate) < strtotime($overtime)){
 
-        $sql = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = `$time_in`";
+        $sql = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
         $null = "UPDATE employees SET `time_in`='0000-00-00 00:00:00' WHERE `emp_id`= '$id'";
 
     }
     
     if($timeDate >  $overtime)
     {
-        $sql = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = `$time_in`";
+        $sql = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
         $null = "UPDATE employees SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id'";  
         $update_timeOut = "UPDATE employees SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id'";
         $update_timeRecord = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
