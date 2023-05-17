@@ -7,6 +7,8 @@
     }
 ?>
 
+
+
 <?php include 'reservationCheckDB.php'?>
 <!DOCTYPE html>
 <html>
@@ -74,3 +76,33 @@
 
 </body>
 </html>
+
+
+<?php
+/*
+    $member_id = $_SESSION['member_id'];
+    $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
+    $query = $conn->query("SELECT * FROM `reservation` WHERE `member_id` = '$member_id'") or die(mysqli_error());
+    $reservation = $query->fetch_array(); 
+    $reservation_id = $reservation['reservation_id'];
+    $d_date = $reservation['d_date'];
+    $currentDate = date("Y-m-d");
+    $past_dep = date("Y-m-d", strtotime(strval($$d_date) . ' + 1 day'));
+
+    if($currentDate == $past_dep)
+    {
+        $sql = "DELETE FROM `reservation` WHERE `reservation_id` = '$reservation_id'";
+
+        if ($conn->query($sql) === TRUE) {
+          echo "";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+    }
+    else{
+      echo "";
+    }
+*/
+    
+?>
+

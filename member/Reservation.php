@@ -62,15 +62,16 @@
 </head>
 <body>
 
-<ul>
-  <li id="name"><a href="Memberhomepage.php">Home</a></li>
-  <li id="name"><a href="Reservation.php">Reservation</a></li>
-  <li id="name"><a href="chat.php">Chat</a></li>
-  <li id="name"><a href="#rate">Ratings</a></li>
-  <li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
-  <li class="font1" style="float:right"><a href="#newsfeed">News Feed</a></li>
-  <li class="font1" style="float:right"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
-</ul>
+  <ul>
+    <li id="name"><a href="Memberhomepage.php">Home</a></li>
+    <li id="name"><a href="Reservation.php">Reservation</a></li>
+    <li id="name"><a href="chat.php">Chat</a></li>
+    <li id="name"><a href="#rate">Ratings</a></li>
+    <li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
+    <li class="font1" style="float:right"><a href="#newsfeed">News Feed</a></li>
+    <li class="font1" style="float:right"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
+  </ul>
+  
   <h2>Hotel Reservation</h2>
   <form method="POST" action="reservationDB_conn.php">
     <div class="form-group">
@@ -99,21 +100,17 @@
     </div>
 
     <div class="form-group">
-      <label for="num-of-pax">Number of Pax:</label>
+      <label for="num-of-pax">Number of People:</label>
       <input type="number" id="num-of-pax" name="num-of-pax" required>
     </div>
 
     <div class="form-group">
-      <label for="room-option">Room Option:</label>
-      <select id="room-option" name="room-option">
-        <option value="Penthouse">Penthouse</option> 
-        <option value="Cottages">Cottages</option>
-        <option value="Rooms in the West">Rooms in the West</option>
-        <option value="Rooms in the East">Rooms in the East</option>
-        <option value="Courtyard">Courtyard</option>
-      </select>
+      <label for="room-num">Room Number:</label>
+      <input type="number" id="room-num" name="room-num" required>
     </div>
 
+      </select>
+    </div>
    <div class="form-group">
   <label for="payment-option">Payment Option:</label>
   <div>
@@ -133,7 +130,9 @@
 
     <button type="submit">Submit</button>
   </form>
-
+  <br>
+  <a href="chat.php"><button>Chat</button></a>
+  <a href="../Php/logout.php"><button>Logout</button></a>
 </body>
 </html>
 
