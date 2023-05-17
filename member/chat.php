@@ -29,7 +29,6 @@
 		<li id="name"><a href="chat.php">Chat</a></li>
 		<li id="name"><a href="#Rate">Ratings</a></li>
 		<li class="font1"><a href="#newsfeed">News Feed</a></li>
-		<li id="name"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
 		<li class="font1"><a href="../Php/logout.php">Logout</a></li>
 	</ul>
 
