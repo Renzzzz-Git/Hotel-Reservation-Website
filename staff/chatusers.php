@@ -26,6 +26,8 @@
 			<header>Customer Chat Service </header> 
 			<br>
 			<a href="timeClockPage.php"><button>Go back to Time-in</button></a>
+			<a href="../display/Courtyard.php"><button>View Rooms</button></a>
+			<a href="../newsfeed.php"><button>News Feed</button></a>
 			<a href="../Php/logout.php"><button>Logout</button></a>
 			<br><br>
 

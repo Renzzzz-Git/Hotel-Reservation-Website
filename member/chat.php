@@ -26,9 +26,10 @@
 	<ul>
 		<li id="name"><a href="Memberhomepage.php">Home</a></li>
 		<li id="name"><a href="Reservation.php">Reservation</a></li>
+		<li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
 		<li id="name"><a href="chat.php">Chat</a></li>
 		<li id="name"><a href="#Rate">Ratings</a></li>
-		<li class="font1"><a href="#newsfeed">News Feed</a></li>
+		<li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
 		<li class="font1"><a href="../Php/logout.php">Logout</a></li>
 	</ul>
 

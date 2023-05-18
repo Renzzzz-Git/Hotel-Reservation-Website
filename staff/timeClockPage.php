@@ -31,6 +31,7 @@
         <h3>Time In: <?php echo $timeIn; ?></h3>  
         <h3>Time Out: <?php echo $timeOut; ?></h3>
         <a href="timeClockPage.php"><button>Refresh Date Time</button></a>
+        <a href="../newsfeed.php"><button>News Feed</button></a>
         <br><br>
         <form action="timeIn.php" method="POST">
             <label for="time_in">Time In:</label>
@@ -49,6 +50,7 @@
 
         <div>Click here to<a href="../Php/logout.php"> Logout</a></div>
         <div>Click here to Reply to Members' Messages<a href="chatusers.php"> Chat</a></div>
+        <div>Click here to View Room Details<a href="../display/Courtyard.php"> Rooms</a></div>
         
         <br>
 

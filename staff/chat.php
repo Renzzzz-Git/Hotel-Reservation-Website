@@ -29,6 +29,8 @@
 			<br>
 			<p>Note: Refresh Browser to update messages</p>
 			<a href="chatusers.php"><button>Go back to Chat Users</button></a>
+			<a href="../display/Courtyard.php"><button>View Rooms</button></a>
+			<a href="../newsfeed.php"><button>News Feed</button></a>
 			<a href="../Php/logout.php"><button>Logout</button></a>
 			<?php
     

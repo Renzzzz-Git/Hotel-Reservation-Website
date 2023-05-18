@@ -195,7 +195,7 @@ if (!empty($roomNames)) {
     foreach ($roomNames as $room) {
         $roomNumber = $room['room_number'];
         $roomName = $room['room_name'];
-        echo "<li>$roomName : $roomNumber</li>";
+        echo "<br> <li>$roomName Room Number: $roomNumber</li> <br>";
     }
     echo "</ul>";
 } else {

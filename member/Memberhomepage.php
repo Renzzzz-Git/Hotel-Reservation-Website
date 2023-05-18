@@ -52,8 +52,9 @@
     <li id="name"><a href="Reservation.php">Reservation</a></li>
     <li id="name"><a href="chat.php">Chat</a></li>
     <li id="name"><a href="#ratingFile">Ratings</a></li>
+    <li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
     <li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
-    <li class="font1" style="float:right"><a href="#newsfeed">News Feed</a></li>
+    <li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
     <li class="font1" style="float:right"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
     
   </ul>
