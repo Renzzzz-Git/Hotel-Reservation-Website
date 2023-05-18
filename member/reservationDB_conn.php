@@ -32,27 +32,50 @@ if($arrivalDate < $departureDate)
     $query = $conn->query("SELECT * FROM `room` WHERE `room_number` = '$roomOption'");
     $fetch = $query->fetch_array();
     $roomId = $fetch['room_id'];
+    $roomPax =$fetch['occupancy'];
+    $roomPrice = $fetch['price'];
+
+    // Calculate the number of nights
+    $arrivalDateObj = new DateTime($arrivalDate);
+    $departureDateObj = new DateTime($departureDate);
+    $numberOfNights = $arrivalDateObj->diff($departureDateObj)->format('%a');
+
+    $Totalbill = $roomPrice * $numberOfNights;
 
     $A_Query = $conn->query("SELECT * FROM `reservation` WHERE `a_date` = '$arrivalDate' && `room_id` = '$roomId'");
     $a_row = $A_Query->num_rows;
 
     $D_Query = $conn->query("SELECT * FROM `reservation` WHERE `room_id` = '$roomId' && `d_date` = '$departureDate'");
     $d_row = $D_Query->num_rows;
+    $reserveID = 'R' . time();
 
 
 
-    $sql = "INSERT INTO `reservation` (reservation_id, member_id, room_id, a_date, d_date, no_of_pax, checkin_status) VALUES (DEFAULT, '$member_id', '$roomId', '$arrivalDate', '$departureDate', '$numOfPax', '')";
-
-    if($a_row > 0 || $d_row > 0)
+    $sql = "INSERT INTO `reservation` (reservation_id, member_id, room_id, a_date, d_date, no_of_pax, total_bill) VALUES ('$reserveID', '$member_id', '$roomId', '$arrivalDate', '$departureDate', '$numOfPax', '$Totalbill')";
+    
+    if($a_row > 0 || $d_row > 0 || $numOfPax > $roomPax)
     {
-        echo "Reservation With similar arrival or departure date has been detected, reservation cancelled";
+        echo "Reservation With similar arrival or departure date has been detected or occupancy of room is less than persons reserved for, reservation cancelled";
         echo "<br><a href=\"Reservation.php\">Go back to reservation</a>";
     }else{
-        $conn->query($sql);
-        echo "Reservation Added Successfully";
-        echo "<br><a href=\"Reservation.php\">Go back to reservation</a>";
+ 
+            $conn->query($sql);
+            echo "Reservation Added Successfully";
+            echo "<br> Reserved to " . $firstName . " " . $lastName;
+            echo "<br> Arrival Date: " . $arrivalDate;
+            echo "<br> Departure Date: " . $departureDate;
+            echo "<br> Contact Number: " . $contactNumber;
+            echo "<br> Number of Persons: " . $numOfPax;
+            echo "<br> Room Number: " . $roomOption;
+            echo "<br> Payment Option: " . $paymentOption;
+            echo "<br> Bill Amount: $" . $Totalbill;
+            echo "<br><a href=\"Reservation.php\">Go back to reservation</a>";
+            
+
 
     }
+
+
     $conn->close();
 }
 else{

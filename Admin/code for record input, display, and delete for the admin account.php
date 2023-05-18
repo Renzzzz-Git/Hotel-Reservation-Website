@@ -27,6 +27,7 @@
 
 <ul>
   <li><a href="#home">Home</a></li>
+  <li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
   <li><a href="code for displaying the news event on the page.php">News</a></li>
   <li><a class="active" href="#contact">Profile</a></li>
   <li><a href="#about">About</a></li>

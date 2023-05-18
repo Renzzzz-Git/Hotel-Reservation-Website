@@ -64,6 +64,7 @@
 
   <ul>
     <li id="name"><a href="Memberhomepage.php">Home</a></li>
+    <li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
     <li id="name"><a href="Reservation.php">Reservation</a></li>
     <li id="name"><a href="chat.php">Chat</a></li>
     <li id="name"><a href="#rate">Ratings</a></li>
