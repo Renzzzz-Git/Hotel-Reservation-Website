@@ -10,7 +10,7 @@
   }
   $average = $sum / $row;
 
-  echo "Hotel Rating Average: " . $average;
+  echo "<h1>Hotel Rating Average: " .$average . "</h1>";
   echo "<br><a href=\"homepage.php\">Return Homepage</a>"
 
 ?>
