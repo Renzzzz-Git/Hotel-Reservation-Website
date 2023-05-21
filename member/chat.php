@@ -7,68 +7,64 @@
     }
 ?>
 
-<?php include 'viewMessages.php'?>
-<?php include 'reservationCheckDB.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, intitial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Hotel Reservation System</title>
-	<link href="../css/chat.css"  rel = "stylesheet" type = "text/css" >
-	<link href="../css/homepage.css"  rel = "stylesheet" type = "text/css" >
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/chat.css">
+    <title>Member Chat</title>
 </head>
-
 <body>
-	<ul>
-		<li id="name"><a href="Memberhomepage.php">Home</a></li>
-		<li id="name"><a href="Reservation.php">Reservation</a></li>
-		<li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
-		<li id="name"><a href="chat.php">Chat</a></li>
-		<li id="name"><a href="#Rate">Ratings</a></li>
-		<li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
-		<li class="font1"><a href="../Php/logout.php">Logout</a></li>
-	</ul>
 
 
-	<div class="wrapper">
-		<section class="form login">
-			<header>Customer Chat Service </header> 
-			<br>
-			<a href="chat.php"><button>Refresh Messages</button>
-			 <a href="../Php/logout.php"><button>Logout</button></a>
-			<br><br>
-			<div class="chatwrap">
-				<div class="scrollBox">
-					<?php 
-							foreach($msg as $message)
-							{
-								echo "<br><br> Message: " .  $message['1'] . "<br>";
-								echo "Reply: " . $message['2'] . "<br><br>";
-							}
-
-						?>
-				</div>
-
-				
-			</div>
-			<form action="sendMessages.php" method="POST" enctype="multipart/form-data" autocomplete="off">
-				<div class="name-details">
-					<div class="field input">
-						<input type="text" name="message" id="message" placeholder="Enter your message" required>
-					</div>
-					<div class="field button">
-						<input type="submit" value="Send"  >
-					</div>
-				</div>
-			</form>
+<?php include 'viewMessages.php'?>
 
 
-			
-		</section>
-	</div>
+<!--NAVBAR-->
+<a href="Memberhomepage.php"><img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px"></a>
+    <ul>
+        <div class="leftlinks">
+        <li><a href="Memberhomepage.php">Home</a></li>
+        <li><a href="display/Courtyard.php">Rooms</a></li>
+        <li><a href="Reservation.php">Reservation</a></li>
+        <li><a href="newsfeed.php">News Feed</a></li>
+        <li><a href="#about">About</a></li>
+        </div>
+        <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+    </ul>
+
+    <div class="box_center">
+        <div class="main_box">
+            <header>Chat to Staff</header>
+            <br>
+            <div class="scrollBox">
+                <?php 
+                    foreach($msg as $message)
+                        {
+                            echo "<br><br> Message: " .  $message['1'] . "<br>";
+                            echo "Reply: " . $message['2'] . "<br><br>";
+                        }
+
+                ?>
+            </div>
+
+
+            <br>
+
+            <form action="sendMessages.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+
+                    <input type="text" name="message" id="message" placeholder="Enter your message" required>
+
+                    <br>
+                    <input type="submit" value="Send"  class="button">
+
+            </form>
+        </div>
+    </div>
+    
 </body>
 </html>

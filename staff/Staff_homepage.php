@@ -1,8 +1,20 @@
+<?php
+	session_start();
+
+    if(!isset($_SESSION['username'])){
+        header('location:../homepage.php');
+        
+    }
+?>
+
+
+
+<?php include 'reservationCheckDB.php'?>
 <!DOCTYPE html>
 <html>
 <head>
 
-  <link rel="stylesheet" href="homepageNEW1.css">
+  <link rel="stylesheet" href="../css/homepage.css">
 
 </head>
 <body>
@@ -10,12 +22,13 @@
 <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
   <ul>
     <div class="leftlinks">
-    <li><a href="#hotel">Home</a></li>
-    <li><a href="display/Courtyard.php">Rooms</a></li>
-    <li><a href="display/Courtyard.php">Reservation</a></li>
-    <li><a href="newsfeed.php">News Feed</a></li>
-    <li><a href="#about">About</a></li>
-  </div>
+      <li><a href="Staff_homepage.php">Home</a></li>
+      <li><a href="display/Courtyard.php">Rooms</a></li>
+      <li><a href="chatusers.php">Chat</a></li>
+      <li><a href="attendance.php">Attendance</a></li>
+      <li><a href="newsfeed.php">News Feed</a></li>
+      <li><a href="#about">About</a></li>
+    </div>
     <li style="float:right;"><a href="login_Prompt.php">Logout</a></li>
   </ul>
 
@@ -52,11 +65,11 @@ echo "</div>";
 
 ?>
 
-  <img src="beach.jpg" width="100%" height="628px">
+  <img src="../photos/beach.jpg" width="100%" height="628px">
 
-  <a href="#" class="ratebutton">Rate</a>
+  <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
   
-  <a href="chat.php" class="chatbutton">Chat</a>
+  <a href="chatusers.php" class="chatbutton">Chat</a>
 
   <div class="rooms">
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>

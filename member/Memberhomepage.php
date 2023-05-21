@@ -22,13 +22,13 @@
 <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
   <ul>
     <div class="leftlinks">
-      <li><a href="#hotel">Home</a></li>
+      <li><a href="Memberhomepage.php">Home</a></li>
       <li><a href="display/Courtyard.php">Rooms</a></li>
       <li><a href="Reservation.php">Reservation</a></li>
       <li><a href="newsfeed.php">News Feed</a></li>
       <li><a href="#about">About</a></li>
     </div>
-    <li style="float:right;"><a href="login_Prompt.php">Logout</a></li>
+    <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
   </ul>
 
   <div class="greet"><img src="../photos/Welcome to Firefly Hotel (2).png" width="650" height="415"></div>

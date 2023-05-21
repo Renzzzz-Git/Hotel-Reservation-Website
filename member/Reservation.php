@@ -62,16 +62,18 @@
 </head>
 <body>
 
-  <ul>
-    <li id="name"><a href="Memberhomepage.php">Home</a></li>
-    <li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
-    <li id="name"><a href="Reservation.php">Reservation</a></li>
-    <li id="name"><a href="chat.php">Chat</a></li>
-    <li id="name"><a href="#rate">Ratings</a></li>
-    <li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
-    <li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
-    <li class="font1" style="float:right"><a href="Rate.php" class=<?php echo $disable?>>Rate Experience</a></li>
-  </ul>
+<!--NAVBAR-->
+<a href="Memberhomepage.php"><img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px"></a>
+    <ul>
+        <div class="leftlinks">
+        <li><a href="Memberhomepage.php">Home</a></li>
+        <li><a href="display/Courtyard.php">Rooms</a></li>
+        <li><a href="Reservation.php">Reservation</a></li>
+        <li><a href="newsfeed.php">News Feed</a></li>
+        <li><a href="#about">About</a></li>
+        </div>
+        <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+    </ul>
   
   <h2>Hotel Reservation</h2>
   <form method="POST" action="reservationDB_conn.php">
@@ -131,9 +133,6 @@
 
     <button type="submit">Submit</button>
   </form>
-  <br>
-  <a href="chat.php"><button>Chat</button></a>
-  <a href="../Php/logout.php"><button>Logout</button></a>
 </body>
 </html>
 
