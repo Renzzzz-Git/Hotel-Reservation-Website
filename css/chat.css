@@ -11,11 +11,53 @@
     border-radius: 5px;
 }
 
+.main_box2{
+    width:1000px;
+    height:420px;
+    border: 0.1px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+.user_box{
+    width:500px;
+    height:420px;
+    border: 0.1px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
 
 
 .scrollBox{
     background: #e6e3e3;
     height:290px;
+    width:950px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+
+.scrollBox2{
+    background: #e6e3e3;
+    height:350px;
+    width:950px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+
+.userScrollBox{
+    height:300px;
     width:950px;
     padding:20px; #ccc;
     font-family: 'Poppins', sans-serif;
@@ -42,7 +84,13 @@ input{
     background-color: green;
 }
 
-.box_center{
+.box_center2{
+    margin: 0px 0px 30% 30%;
+    width: 100%;
+    padding: 10px;
+}
+
+.box_center1{
     margin: 0px 0px 5% 5%;
     width: 100%;
     padding: 10px;

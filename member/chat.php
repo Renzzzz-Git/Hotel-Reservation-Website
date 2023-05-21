@@ -37,10 +37,10 @@
         <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
     </ul>
 
-    <div class="box_center">
+    <div class="box_center1">
         <div class="main_box">
             <header>Chat to Staff</header>
-            <br>
+            <hr>
             <div class="scrollBox">
                 <?php 
                     foreach($msg as $message)

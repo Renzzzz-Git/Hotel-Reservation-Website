@@ -15,6 +15,7 @@
 <head>
 
   <link rel="stylesheet" href="../css/homepage.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 </head>
 <body>
@@ -68,7 +69,7 @@ echo "</div>";
 
   <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
   
-  <a href="chat.php" class="chatbutton">Chat</a>
+  <a href="chat.php" class="chatbutton"><i class='far fa-comment-dots' >Chat</i></a>
 
   <div class="rooms">
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>
