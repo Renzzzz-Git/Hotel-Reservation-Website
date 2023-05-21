@@ -2,16 +2,18 @@
 
     session_start();
     $username = $_SESSION['username'];
-    $sender_id = $_SESSION['member_id'];
-    $receiver_id = '0001';
 
     //Fetching data of members from database
-    $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
+    $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
+    $query = $conn->query("SELECT * FROM `members` WHERE `username` = '$username'") or die(mysqli_error());
+    $fetch = $query->fetch_array();
+    $id = $fetch['member_id'];
+    $msg_id = uniqid();
     $content = $_POST['message'];
 
 
     //Query Statement for inserting message
-    $sql = "INSERT INTO `message` (sender_id, receiver_id, msg) VALUES ('$sender_id', '$receiver_id', '$content')";
+    $sql = "INSERT INTO `message` (msg_id, msg, reply, member_id) VALUES ('$msg_id', '$content', '', '$id')";
     
     
     //Running query Statement

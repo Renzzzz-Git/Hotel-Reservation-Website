@@ -2,25 +2,12 @@
 
     //session_start();
     //Getting Member ID of User
-    //sender = member && receiver = employee
-    $sender_id = $_SESSION['member_id'];
-    $receiver_id = '0001';
-    $output = "";
-    $conn = mysqli_connect('localhost', 'root', '', 'hotel-reservation-system') or die('Unable to connect');
-
-    $query = $conn->query("SELECT * FROM `message` WHERE `sender_id` = '$sender_id' AND `receiver_id` = '$receiver_id' OR `sender_id` = '$receiver_id' AND `receiver_id` = '$sender_id'") or die(mysqli_error());
-
+    $member_id = $_SESSION['member_id'];
+    $conn = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
+    $query = $conn->query("SELECT * FROM `message` WHERE `member_id` = '$member_id'") or die(mysqli_error());
+    $msg = $query->fetch_all(); //Fetching all messages of the user, fetch variable is to be used in the html file
 	$row = $query->num_rows;
 
-    if($row > 0)
-    {
-        while($row = mysqli_fetch_assoc($query))
-        {
-            if($row[''])
-        }
-    }
-
- 
 
 
 
