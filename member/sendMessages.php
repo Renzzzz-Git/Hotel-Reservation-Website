@@ -25,7 +25,7 @@
     
     //Connection close and redirect back to chat page
     $conn->close();
-    header('location:chat.php');
+    header('location:chat2.php');
 
 
 

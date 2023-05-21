@@ -14,7 +14,7 @@
 <html>
 <head>
 
-  <link rel="stylesheet" href="homepageNEW1.css">
+  <link rel="stylesheet" href="../css/homepage.css">
 
 </head>
 <body>
@@ -22,12 +22,12 @@
 <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
   <ul>
     <div class="leftlinks">
-    <li><a href="#hotel">Home</a></li>
-    <li><a href="display/Courtyard.php">Rooms</a></li>
-    <li><a href="Reservation.php">Reservation</a></li>
-    <li><a href="newsfeed.php">News Feed</a></li>
-    <li><a href="#about">About</a></li>
-  </div>
+      <li><a href="#hotel">Home</a></li>
+      <li><a href="display/Courtyard.php">Rooms</a></li>
+      <li><a href="Reservation.php">Reservation</a></li>
+      <li><a href="newsfeed.php">News Feed</a></li>
+      <li><a href="#about">About</a></li>
+    </div>
     <li style="float:right;"><a href="login_Prompt.php">Logout</a></li>
   </ul>
 
@@ -64,7 +64,7 @@ echo "</div>";
 
 ?>
 
-  <img src="beach.jpg" width="100%" height="628px">
+  <img src="../photos/beach.jpg" width="100%" height="628px">
 
   <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
   
