@@ -1,6 +1,7 @@
 <?php
     date_default_timezone_set('Asia/Manila');
     $username = $_SESSION['username'];
+    $id = $_SESSION['emp_id'];
     $datetime = date("Y-m-d H:i:s");
     
     //For Fetching data of the current TimeIn and TimeOut of staff members
@@ -40,6 +41,10 @@
       $disable2 = 'disabled';
     }
 
+    
+    $connDB = mysqli_connect('localhost', 'root', '', 'firefly_hotel') or die('Unable to connect');
+    $timeQuery = $connDB->query("SELECT * FROM `timerecord` WHERE `emp_id` = '$id'");
+    $timeFetch = $timeQuery->fetch_all();
     
 
 ?>

@@ -33,7 +33,8 @@
 		
 		if($row > 0){
 			$_SESSION['username'] = $fetch['username'];
-			header('location:timeClockPage.php');
+			$_SESSION['emp_id'] = $fetch['emp_id'];
+			header('location:attendance.php');
 		}else{
 			echo "<center><label style = 'color:red;'>Invalid username or password</label></center>";
 		}
