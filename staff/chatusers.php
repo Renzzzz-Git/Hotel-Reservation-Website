@@ -27,9 +27,10 @@
     <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
     <ul>
         <div class="leftlinks">
-            <li><a href="attendance.php">Home</a></li>
+            <li><a href="Staff_homepage.php">Home</a></li>
             <li><a href="display/Courtyard.php">Rooms</a></li>
             <li><a href="attendance.php">Attendance</a></li>
+            <li><a href="chatusers.php">Chat</a></li>
             <li><a href="newsfeed.php">News Feed</a></li>
             <li><a href="#about">About</a></li>
         </div>

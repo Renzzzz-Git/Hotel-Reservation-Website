@@ -23,7 +23,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: serif;
+  font-family: Arial;
   font-size: 20px;
  
 }
@@ -53,7 +53,7 @@ li a:hover:not(.active) {
   width: 80px;
   text-align: center;
   background-color: darkgreen;
-  font-family:serif;
+  font-family: Arial;
 }
 
 .book {
@@ -67,7 +67,7 @@ li a:hover:not(.active) {
   width: 80px;
   text-align: center;
   background-color: darkgreen;
-  font-family: serif;
+  font-family: Arial;
 }
 
 .bottomlinks {
@@ -103,7 +103,7 @@ li a:hover:not(.active) {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 51px;
-  font-family: serif;
+  font-family: Arial;
   color: #533C1D;
 }
 

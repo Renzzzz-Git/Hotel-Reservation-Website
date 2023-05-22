@@ -1,0 +1,130 @@
+/*---------------------------------NAV BAR------------------------------*/
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2A1B0E;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 90px;
+ 
+}
+
+li {
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 16px;
+ 
+}
+
+li a:hover:not(.active) {
+  color: goldenrod;
+}
+
+.active {
+  color: goldenrod;
+}
+
+
+
+.leftlinks{
+  margin-left: 130px;
+}
+
+
+/*-----------------------------------NOELS DISPLAY-----------------------------------------------*/
+
+.roomData{
+  width: 330px;
+  padding: 0px;
+  position: absolute;
+}
+
+.roomArticle{
+  width: 700px;
+  padding: 0px;
+  margin-left: 500px;
+  position: absolute;
+  text-align: justify;
+}
+
+.centerBox{
+  background-color: white;
+  width: 1200px;
+  height: 1700px;
+  border: 1px solid black;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.logo{
+  width: 200px;
+  height: 120px;
+  position: absolute;
+}
+
+.roomImageDisplay{
+  width: 450px;
+  height: 300px;
+  position: absolute;  
+}
+
+.roomImageDisplayPointFiveIndention{
+  width: 450px;
+  height: 300px;
+  margin-left: 50px;
+  position: absolute;  
+}
+
+.roomImageDisplayFirstIndention{
+  width: 450px;
+  height: 300px;
+  margin-left: 100px;
+  position: absolute;  
+}
+
+.roomImageDisplaySecondIndention{
+  width: 450px;
+  height: 300px;
+  margin-left: 200px;
+  position: absolute;  
+}
+
+.roomImageDisplaySecondIndentionSpecial{
+  width: 300px;
+  height: 450px;
+  margin-left: 200px;
+  position: absolute;  
+}
+
+
+.oceanviewcontent {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 580px;
+}
+
+
+h1{
+  color:#2A1B0E;
+}

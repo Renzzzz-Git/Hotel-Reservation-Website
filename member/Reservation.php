@@ -14,11 +14,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-----------CSS FOR NAV BAR---------------------------------------->
+
+  <link rel="stylesheet" href="../css/homepage.css">
+
   <title>Hotel Reservation Form</title>
+
+  <!-------------------------CSS FOR FORM ONLY!!!------------------------>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
+
+    body{
+
+        font-family:arial;
+      
+  
     }
 
     h2 {
@@ -27,6 +36,9 @@
 
     .form-group {
       margin-bottom: 20px;
+      margin-left:500px;
+      margin-right:500px;
+
     }
 
     label {
@@ -52,29 +64,52 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      margin-left:500px;
     }
 
     button:hover {
       background-color: #45a049;
     }
+
+    .payment-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.other-input {
+  margin-top: 5px;
+}
+
+    
+
   </style>
-  <link rel="stylesheet" href="../css/homepage.css">
+
 </head>
 <body>
 
-<!--NAVBAR-->
-<a href="Memberhomepage.php"><img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px"></a>
-    <ul>
-        <div class="leftlinks">
-        <li><a href="Memberhomepage.php">Home</a></li>
-        <li><a href="display/Courtyard.php">Rooms</a></li>
-        <li><a href="Reservation.php">Reservation</a></li>
-        <li><a href="newsfeed.php">News Feed</a></li>
-        <li><a href="#about">About</a></li>
-        </div>
-        <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
-    </ul>
-  
+<!---------------------------------NAV BAR-------------------------------->
+<?php include 'reservationCheckDB.php'?>
+<img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
+  <ul>
+    <div class="leftlinks">
+      <li><a href="Memberhomepage.php">Home</a></li>
+      <li><a href="display/Courtyard.php">Rooms</a></li>
+      <li><a href="Reservation.php">Reservation</a></li>
+      <li><a href="Rate.php" class="<?php echo $disable?>">Rate</a></li>
+      <li><a href="newsfeed.php">News Feed</a></li>
+      <li><a href="#about">About</a></li>
+    </div>
+    <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+  </ul>
+
+  <!-----------------------------FORM--------------------------------------->
+
   <h2>Hotel Reservation</h2>
   <form method="POST" action="reservationDB_conn.php">
     <div class="form-group">
@@ -114,34 +149,34 @@
 
       </select>
     </div>
-   <div class="form-group">
+    <div class="form-group">
   <label for="payment-option">Payment Option:</label>
-  <div>
-    <input type="radio" id="bdo" name="payment-option" value="bdo" required>
-    <label for="bdo">BDO</label>
+  <div class="payment-options">
+    <div class="option">
+      <input type="radio" id="bdo" name="payment-option" value="bdo" required>
+      <label for="bdo">BDO</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="bpi" name="payment-option" value="bpi" required>
+      <label for="bpi">BPI</label>
+    </div>
+    <div class="option">
+      <input type="radio" id="other" name="payment-option" value="other" required>
+      <label for="other">Other</label>
+    </div>
   </div>
-  <div>
-    <input type="radio" id="bpi" name="payment-option" value="bpi" required>
-    <label for="bpi">BPI</label>
-  </div>
-  <div>
-    <input type="radio" id="other" name="payment-option" value="other" required>
-    <label for="other">Other</label>
-    <input type="text" id="other-payment" name="other-payment" placeholder="Enter other payment option" style="margin-top: 5px;">
+  <div class="other-input">
+    <input type="text" id="other-payment" name="other-payment" placeholder="Enter other payment option">
   </div>
 </div>
 
+
+
+
     <button type="submit">Submit</button>
   </form>
+
+  <br>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

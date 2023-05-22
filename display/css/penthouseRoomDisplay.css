@@ -1,3 +1,52 @@
+/*---------------------------------NAV BAR------------------------------*/
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2A1B0E;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 90px;
+ 
+}
+
+li {
+  float: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 16px;
+ 
+}
+
+li a:hover:not(.active) {
+  color: goldenrod;
+}
+
+.active {
+  color: goldenrod;
+}
+
+
+
+.leftlinks{
+  margin-left: 130px;
+}
+
+
+/*-----------------------------------NOELS DISPLAY-----------------------------------------------*/
+
 .roomData{
   width: 300px;
   padding: 0px;
@@ -22,6 +71,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin: auto;
+  border-radius: 5px;
 }
 
 .logo{
@@ -57,32 +107,17 @@
   position: absolute;  
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: darkgreen;
-  color: white;
+
+
+.penthousecontent {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1300px;
+  height: 580px;
 }
 
-li {
-  float: left;
+h1{
+  color:#2A1B0E;
 }
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-.active {
-  background-color: black;
-}
-

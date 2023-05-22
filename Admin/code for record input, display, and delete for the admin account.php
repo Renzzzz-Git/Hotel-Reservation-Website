@@ -16,23 +16,21 @@
 </html>
 <head>
   <link rel="stylesheet" href="../css/adminAccount.css">
+  <link rel="stylesheet" href="../css/homepage.css">
 </head>
 <body>
 
-<img src="../photos/logo.png" class="logo">
 
-<br>
-<h1><center>Welcome to Hotel Firefly</center></h1>
-<br>
 
+<img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
-  <li><a href="code for displaying the news event on the page.php">News</a></li>
-  <li><a class="active" href="#contact">Profile</a></li>
-  <li><a href="#about">About</a></li>
-  <li style="float:right"><a href="../Php/logout.php">Logout</a></li>
-</ul>
+    <div class="leftlinks">
+    <li><a href="code for record input, display, and delete for the admin account.php">Profile</a></li>
+    <li><a href="code for displaying the news event on the page.php">Newsfeed</a></li>
+  </div>
+    
+    <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+  </ul>
 
 <h1><center>News Feed System</center></h1>
 

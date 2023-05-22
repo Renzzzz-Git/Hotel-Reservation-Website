@@ -9,7 +9,7 @@
 
 
 
-<?php include 'reservationCheckDB.php'?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,17 +20,17 @@
 <body>
 
 <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
-  <ul>
-    <div class="leftlinks">
-      <li><a href="Staff_homepage.php">Home</a></li>
-      <li><a href="display/Courtyard.php">Rooms</a></li>
-      <li><a href="chatusers.php">Chat</a></li>
-      <li><a href="attendance.php">Attendance</a></li>
-      <li><a href="newsfeed.php">News Feed</a></li>
-      <li><a href="#about">About</a></li>
-    </div>
-    <li style="float:right;"><a href="login_Prompt.php">Logout</a></li>
-  </ul>
+    <ul>
+        <div class="leftlinks">
+            <li><a href="Staff_homepage.php">Home</a></li>
+            <li><a href="display/Courtyard.php">Rooms</a></li>
+            <li><a href="attendance.php">Attendance</a></li>
+            <li><a href="chatusers.php">Chat</a></li>
+            <li><a href="newsfeed.php">News Feed</a></li>
+            <li><a href="#about">About</a></li>
+        </div>
+        <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+    </ul>
 
   <div class="greet"><img src="../photos/Welcome to Firefly Hotel (2).png" width="650" height="415"></div>
 
@@ -67,7 +67,7 @@ echo "</div>";
 
   <img src="../photos/beach.jpg" width="100%" height="628px">
 
-  <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
+
   
   <a href="chatusers.php" class="chatbutton">Chat</a>
 
@@ -75,7 +75,7 @@ echo "</div>";
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>
   </div>
   <div class="book">
-    <a class="bottomlinks" href="member/Memberhomepage.php">Book</a>
+    <a class="bottomlinks" href="member/MemberLogin.php">Book</a>
   </div>
 </div>
 

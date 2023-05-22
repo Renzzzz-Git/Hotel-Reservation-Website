@@ -26,6 +26,7 @@
       <li><a href="Memberhomepage.php">Home</a></li>
       <li><a href="display/Courtyard.php">Rooms</a></li>
       <li><a href="Reservation.php">Reservation</a></li>
+      <li><a href="Rate.php" class="<?php echo $disable?>">Rate</a></li>
       <li><a href="newsfeed.php">News Feed</a></li>
       <li><a href="#about">About</a></li>
     </div>
@@ -75,7 +76,7 @@ echo "</div>";
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>
   </div>
   <div class="book">
-    <a class="bottomlinks" href="member/Memberhomepage.php">Book</a>
+    <a class="bottomlinks" href="Reservation.php">Book</a>
   </div>
 </div>
 

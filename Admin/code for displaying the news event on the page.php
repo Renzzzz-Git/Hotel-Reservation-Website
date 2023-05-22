@@ -16,23 +16,21 @@
 </html>
 <head>
   <link rel="stylesheet" href="../css/adminAccount.css">
+  <link rel="stylesheet" href="../css/homepage.css">
 </head>
 <body>
 
-<img src="../photos/logo.png" class="logo">
 
-<br>
-<h1><center>Welcome to Hotel Firefly</center></h1>
-<br>
 
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
-  <li><a class="active"href="#news">News</a></li>
-  <li><a href="code for record input, display, and delete for the admin account.php">Profile</a></li>
-  <li><a href="#about">About</a></li>
-  <li style="float:right"><a href="../Php/logout.php">Logout</a></li>
-</ul>
+<img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
+  <ul>
+    <div class="leftlinks">
+    <li><a href="code for record input, display, and delete for the admin account.php">Profile</a></li>
+    <li><a href="code for displaying the news event on the page.php">Newsfeed</a></li>
+  </div>
+    
+    <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+  </ul>
 
 <h1><center>Hotel News and Events</center></h1>
 
@@ -52,7 +50,7 @@ if (mysqli_num_rows($result) > 0) {
         <h3><?php echo $data['Title'];?></h3>
         <h4>Date: <?php echo $data['NEDate'];?></h4>
         <p align="justify"><?php echo $data['Description'];?></p>
-        <p><center><?php echo"<img src=images/".$data['Image']." height=300 width=400 />";?></center></p>
+        <p><center><?php echo"<img src=\"images/".$data['Image']."\" height=300 width=400 />";?></center></p>
         <br>
 
 <?php 
