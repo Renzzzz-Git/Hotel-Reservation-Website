@@ -14,7 +14,8 @@
 <html>
 <head>
 
-  <link rel="stylesheet" href="homepageNEW1.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 </head>
 <body>
@@ -22,13 +23,14 @@
 <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
   <ul>
     <div class="leftlinks">
-    <li><a href="#hotel">Home</a></li>
-    <li><a href="display/Courtyard.php">Rooms</a></li>
-    <li><a href="Reservation.php">Reservation</a></li>
-    <li><a href="newsfeed.php">News Feed</a></li>
-    <li><a href="#about">About</a></li>
-  </div>
-    <li style="float:right;"><a href="login_Prompt.php">Logout</a></li>
+      <li><a href="Memberhomepage.php">Home</a></li>
+      <li><a href="display/Courtyard.php">Rooms</a></li>
+      <li><a href="Reservation.php">Reservation</a></li>
+      <li><a href="Rate.php" class="<?php echo $disable?>">Rate</a></li>
+      <li><a href="newsfeed.php">News Feed</a></li>
+      <li><a href="#about">About</a></li>
+    </div>
+    <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
   </ul>
 
   <div class="greet"><img src="../photos/Welcome to Firefly Hotel (2).png" width="650" height="415"></div>
@@ -64,17 +66,17 @@ echo "</div>";
 
 ?>
 
-  <img src="beach.jpg" width="100%" height="628px">
+  <img src="../photos/beach.jpg" width="100%" height="628px">
 
   <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
   
-  <a href="chat.php" class="chatbutton">Chat</a>
+  <a href="chat.php" class="chatbutton"><i class='far fa-comment-dots' >Chat</i></a>
 
   <div class="rooms">
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>
   </div>
   <div class="book">
-    <a class="bottomlinks" href="member/Memberhomepage.php">Book</a>
+    <a class="bottomlinks" href="Reservation.php">Book</a>
   </div>
 </div>
 

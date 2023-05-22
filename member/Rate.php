@@ -58,10 +58,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
   <title>Star Rating and Feedback</title>
   <style>
+     body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .feedback-form {
+      text-align: center;
+    }
+
     .rating {
       unicode-bidi: bidi-override;
       direction: rtl;
       text-align: center;
+      margin-bottom: 10px;
     }
 
     .rating input {
@@ -85,13 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       color: #ffc107;
     }
 
-    .feedback {
-      margin-top: 20px;
-    }
-
     .feedback textarea {
-      width: 100%;
-      height: 100px;
+      width: 600px;
+      height: 200px;
       padding: 10px;
     }
 
@@ -103,27 +111,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       border: none;
       cursor: pointer;
     }
+
+    h2{
+        color: #2A1B0E; 
+    }
   </style>
 </head>
 <body>
-  <form method="POST">
-    <div class="rating">
-      <input type="radio" name="rating" id="star5" value="5">
-      <label for="star5"></label>
-      <input type="radio" name="rating" id="star4" value="4">
-      <label for="star4"></label>
-      <input type="radio" name="rating" id="star3" value="3">
-      <label for="star3"></label>
-      <input type="radio" name="rating" id="star2" value="2">
-      <label for="star2"></label>
-      <input type="radio" name="rating" id="star1" value="1">
-      <label for="star1"></label>
-    </div>
+<div class="feedback-form">
+    <h2>How was your stay?</h2>
+    <form method="POST">
+      <div class="rating">
+        <input type="radio" name="rating" id="star5" value="5">
+        <label for="star5"></label>
+        <input type="radio" name="rating" id="star4" value="4">
+        <label for="star4"></label>
+        <input type="radio" name="rating" id="star3" value="3">
+        <label for="star3"></label>
+        <input type="radio" name="rating" id="star2" value="2">
+        <label for="star2"></label>
+        <input type="radio" name="rating" id="star1" value="1">
+        <label for="star1"></label>
+      </div>
 
-    <div class="feedback">
-      <textarea name="feedback" placeholder="Leave your feedback"></textarea>
-      <input type="submit" value="Submit">
-    </div>
-  </form>
+      <div class="feedback">
+        <textarea name="feedback" placeholder="Leave your feedback"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
 </body>
 </html>

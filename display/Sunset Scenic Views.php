@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-</html>
 <head>
+
   <link rel="stylesheet" href="css/sunsetRoomDisplay.css">
+
 </head>
 <body>
 
-<img src="logo.png" class="logo">
+<img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
+  <ul>
+    <div class="leftlinks">
+    <li><a href="Courtyard.php">Courtyard</a></li>
+    <li><a href="Ocean View Cottages.php">Ocean View Cottages</a></li>
+    <li><a href="Penthouse Units.php">Penthouse</a></li>
+    <li><a href="Sunrise Scenic Views.php">Sunrise Scenic Views</a></li>
+    <li><a href="Sunset Scenic Views.php">Sunset Scenic Views</a></li>
+  </div>
+    <li style="float:right;"><a href="../homepage.php">Back</a></li>
+    <li style="float:right;"><a href="Filter.php">Filter</a></li>
+  </ul>
 
-<br>
-<h1><center>Welcome to Hotel Firefly</center></h1>
-<br>
-
-<ul>
-  <li><a href="Courtyard.php">Courtyard</a></li>
-  <li><a class="active" href="Oceanic View Cottages.php">Oceanic View Cottages</a></li>
-  <li><a href="Penthouse Units.php">Penthouse Units</a></li>
-  <li><a href="Sunrise Scenic Views.php">Sunrise Scenic Views</a></li>
-  <li><a href="Sunset Scenic Views.php">Sunset Scenic Views</a></li>
-  <li><a href="filter.php">Room Filter</a></li>
-  <li style="float:right"><a href="../Php/logout.php">Logout</a></li>
-</ul>
-
+  
+<h1><center>Sunset Scenic Views</center></h1>
 
 <?php
 
@@ -41,8 +41,7 @@
 
 ?>
 
-  <h1><center>Sunset Scenic Views</center></h1>
-
+<div class="sunsetcontent">
 <div class="centerBox">
 <div class="roomData">
 
@@ -59,7 +58,7 @@
   <b>Category: </b><?php echo $room18_19And20['Category'];?><br>
   <b>Bed Type: </b><?php echo $room18_19And20['Bed Type'];?><br><br>
 
-  <form action="../member/Memberhomepage.php">
+  <form action="../member/MemberLogin.php">
       <input type="submit" value="Make A Reservation" />
   </form>
 
@@ -218,5 +217,7 @@
   <br>
 </div>
 </div>
+</div>
+
 </body>
-	
+</html>

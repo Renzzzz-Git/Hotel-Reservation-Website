@@ -12,7 +12,7 @@
     <div class="leftlinks">
     <li><a href="#hotel">Home</a></li>
     <li><a href="display/Courtyard.php">Rooms</a></li>
-    <li><a href="newsfeed.php">News Feed</a></li>
+    <li><a href="Public_newsfeed.php">News Feed</a></li>
     <li><a href="#about">About</a></li>
   </div>
     <li style="float:right;"><a href="login_Prompt.php">Login</a></li>
@@ -55,7 +55,7 @@ echo "</div>";
     <a class="bottomlinks" href="display/Courtyard.php">Rooms</a>
   </div>
   <div class="book">
-    <a class="bottomlinks" href="member/Memberhomepage.php">Book</a>
+    <a class="bottomlinks" href="member/MemberLogin.php">Book</a>
   </div>
 </div>
 

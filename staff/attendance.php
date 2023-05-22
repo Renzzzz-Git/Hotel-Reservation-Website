@@ -26,16 +26,18 @@
 <body>
 
     <!--Navbar Section-->
+    <img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
     <ul>
-		<li id="name"><a href="#home">Home</a></li>
-		<li id="name"><a href="#reserve">Reservation</a></li>
-		<li id="name"><a href="../display/Courtyard.php">Rooms</a></li>
-		<li id="name"><a href="chatusers.php">Chat</a></li>
-		<li id="name"><a href="#Rate">Ratings</a></li>
-        <li id="name"><a href="attendance.php">Attendance</a></li>
-		<li class="font1" style="float:right"><a href="../Php/logout.php">Logout</a></li>
-        <li class="font1" style="float:right"><a href="../newsfeed.php">News Feed</a></li>
-	</ul>
+        <div class="leftlinks">
+            <li><a href="Staff_homepage.php">Home</a></li>
+            <li><a href="display/Courtyard.php">Rooms</a></li>
+            <li><a href="attendance.php">Attendance</a></li>
+            <li><a href="chatusers.php">Chat</a></li>
+            <li><a href="newsfeed.php">News Feed</a></li>
+            <li><a href="#about">About</a></li>
+        </div>
+        <li style="float:right;"><a href="../Php/logout.php">Logout</a></li>
+    </ul>
 
     <!--Attendance for Time in and time out box-->
     <div class="box_center">

@@ -1,128 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #f7f7f7;
-}
-
-.wrapper{
-    background: #fff;
-    width: 1000px;
-    height: 600px;
-    border-radius: 16px;
-    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);              
-}
-
-
-.chatwrap{
-    background: #e6e3e3;
-    justify-content: center;
-    width: 940px;
-    height: 305px;
-    border-radius: 16px;
-}
-
-.userswrap{
-    background: #fff;
-    width: 500px;
-    height: 600px;
-    border-radius: 16px;
-    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);   
-}
-
-.timewrap{
-    background: #fff;
-    justify-content: center;
+.main_box{
+    width:1000px;
+    height:450px;
+    border: 0.1px solid rgb(255, 255, 255);
     padding: 20px;
-    width: 500px;
-    height: 590px;
-    border-radius: 16px;
-    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);   
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+.main_box2{
+    width:1000px;
+    height:420px;
+    border: 0.1px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+.user_box{
+    width:500px;
+    height:420px;
+    border: 0.1px solid rgb(255, 255, 255);
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+
+.scrollBox{
+    background: #e6e3e3;
+    height:290px;
+    width:950px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
+}
+
+.scrollBox2{
+    background: #e6e3e3;
+    height:350px;
+    width:950px;
+    padding:20px; #ccc;
+    font-family: 'Poppins', sans-serif;
+    overflow:auto;
 }
 
 .userScrollBox{
-    height:290px;
-    width:400px;
-    padding:20px; #ccc;
-    font-family: 'Poppins', sans-serif;
-    overflow:auto;
-}
-
-.scrollBox{
-    height:290px;
-    width:930px;
+    height:300px;
+    width:950px;
     padding:20px; #ccc;
     font-family: 'Poppins', sans-serif;
     overflow:auto;
 }
 
 
-
-/* LOGIN FORM CSS CODE */
-.form{
-    padding: 25px 30px;
+input{
+    width:980px;
+    height: 30px;
+    margin-bottom: 5px;
 }
 
-.form header{
-    font-size: 25px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6e6e6;
-    
+
+.button{
+    width:988px;
+    height: 30px;
+    background-color: rgb(12, 197, 12);
+    color: white;
+    font-weight: bold;
 }
 
-.form form{
-    margin: 20px 0;
+.button:hover{
+    background-color: green;
 }
 
-.form form .error-txt{
-    color: #721c24;
-    background-color: #f8d7da;
-    padding: 8px 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #f5c6cb;
-}
-
-.form form .field{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.form form .input input{
-    height: 40px;
+.box_center2{
+    margin: 0px 0px 30% 30%;
     width: 100%;
-    font-size: 16px;
-    padding: 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px;
 }
 
-.form form .button input{
-    margin-top: 13px;
-    height: 45px;
-    border: none;
-    font-size: 17px;
-    font-weight: 400;
-    background-color: #333;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+.box_center1{
+    margin: 0px 0px 5% 5%;
+    width: 100%;
+    padding: 10px;
+}
 
+header{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+body{
+    font-family: serif;
 }

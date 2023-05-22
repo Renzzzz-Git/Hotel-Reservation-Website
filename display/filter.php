@@ -43,16 +43,19 @@
 </head>
 <body>
 
+<img src="../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
 <ul>
-  <li><a href="../member/Memberhomepage.php">Make Reservation</a></li>
-  <li><a href="Courtyard.php">Courtyard</a></li>
-  <li><a class="active" href="Oceanic View Cottages.php">Oceanic View Cottages</a></li>
-  <li><a href="Penthouse Units.php">Penthouse Units</a></li>
-  <li><a href="Sunrise Scenic Views.php">Sunrise Scenic Views</a></li>
-  <li><a href="Sunset Scenic Views.php">Sunset Scenic Views</a></li>
-  <li><a href="filter.php">Room Filter</a></li>
-  <li style="float:right"><a href="../Php/logout.php">Logout</a></li>
-</ul>
+    <div class="leftlinks">
+    <li><a href="../member/MemberLogin.php">Make Reservation</a></li>
+    <li><a href="Courtyard.php">Courtyard</a></li>
+    <li><a href="Ocean View Cottages.php">Ocean View Cottages</a></li>
+    <li><a href="Penthouse Units.php">Penthouse</a></li>
+    <li><a href="Sunrise Scenic Views.php">Sunrise Scenic Views</a></li>
+    <li><a href="Sunset Scenic Views.php">Sunset Scenic Views</a></li>
+  </div>
+    <li style="float:right;"><a href="../homepage.php">Back</a></li>
+    <li style="float:right;"><a href="Filter.php">Filter</a></li>
+  </ul>
 
 <form method="POST">
     <label for="room-type">Room Type:</label>
