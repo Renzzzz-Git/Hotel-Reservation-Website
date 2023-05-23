@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
    <td><center><?php echo $data['Title']; ?></center></td>
    <td><center><?php echo $data['NEDate']; ?></center></td>
    <td><center><?php echo $data['Description']; ?></center></td>
-   <td><center><?php echo "<img src= 'images/" . $data['Image'] ."' height=200 width=250 />"; ?></center></td>
+   <td><center><?php echo "<img src= 'designFilesAndImages/" . $data['Image'] ."' height=200 width=250 />"; ?></center></td>
    <td>
       <a href="deleteARow.php?rowID=<?php echo $data['id'];?>">Delete</a>
    </td>

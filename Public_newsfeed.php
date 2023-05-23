@@ -38,7 +38,7 @@ if (mysqli_num_rows($result) > 0) {
         <h3><?php echo $data['Title'];?></h3>
         <h4>Date: <?php echo $data['NEDate'];?></h4>
         <p align="justify"><?php echo $data['Description'];?></p>
-        <p><center><?php echo"<img src=\"Admin/images/".$data['Image']."\" height=300 width=400 />";?></center></p>
+        <p><center><?php echo"<img src=\"Admin/designFilesAndImages/".$data['Image']."\" height=300 width=400 />";?></center></p>
         <br>
 
 <?php 
