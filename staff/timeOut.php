@@ -34,12 +34,14 @@
         $update_timeRecord = "UPDATE timerecord SET `time_out`='$forgot_timeOut' WHERE `emp_id`= '$id' && `time_in` = '$time_in'";
     }
 
+    
     if ($conn->query($sql) === TRUE) {
         echo "New record updated successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
+    
     if ($conn->query($null) === TRUE) {
         echo "Record updated successfully";
     } else {
