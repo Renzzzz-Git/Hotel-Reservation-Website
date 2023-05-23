@@ -141,5 +141,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </form>
   </div>
+  <a href="Memberhomepage.php">Homepage</a>
 </body>
 </html>
