@@ -10,6 +10,6 @@ $connectionKeys = mysqli_connect($servername, $username, $password, $databasenam
 
 // Checking if the connection was successfully established
 if ($connectionKeys->connect_error) {
-    die("Connection to Database Failed." . $connectionKeys->connect_error);
+    die($connectionKeys->connect_error);
 }
 ?>

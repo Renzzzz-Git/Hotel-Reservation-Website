@@ -53,7 +53,7 @@
 		
 		if($row > 0){
 			$_SESSION['username'] = $fetch['username'];
-			header('location:code for record input, display, and delete for the admin account.php');
+			header('location:AddNews.php');
 		}else{
 			echo "<center><label style = 'color:red;'>Invalid username or password</label></center>";
 		}

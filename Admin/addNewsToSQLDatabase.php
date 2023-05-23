@@ -1,15 +1,14 @@
 <?php
-	session_start();
+    session_start();
 
     if(!isset($_SESSION['username'])){
         header('location:../homepage.php');
         
     }
-    
 ?>
 
 <?php
-include("code for establishing connection to the sql database.php");
+include("databaseConnect.php");
 
 #Retriving Title, Date, Description, and Image
 $newsEventTitle = $_POST['title'];
@@ -22,7 +21,6 @@ move_uploaded_file($_FILES['imageUpload']['tmp_name'], "images/".$_FILES['imageU
 
 #accessing image location for display
 $imagePath = "images/" . $_FILES["imageUpload"]["name"];
-echo $imagePath;
 $sqlQuery = "INSERT INTO newseventtable (id, Title, NEDate, Description, Image) 
              VALUES ('0', '$newsEventTitle', '$newsEventDate', '$newsEventDescription', '$newsEventImage')";
 
@@ -33,7 +31,7 @@ if (mysqli_query($connectionKeys, $sqlQuery)) {
 <html>
 </html>
 <head>
-  <link rel="stylesheet" href="../css/adminAccount.css">
+  <link rel="stylesheet" href="designFilesAndImages/newsFeedSystemDesign.css">
 </head>
 <body>
     
@@ -48,7 +46,7 @@ if (mysqli_query($connectionKeys, $sqlQuery)) {
         
 
 
-        <form action="code for record input, display, and delete for the admin account.php">
+        <form action="addNews.php">
                 <input type="submit" value="Continue" />
         </form>
     </div>
@@ -58,21 +56,11 @@ if (mysqli_query($connectionKeys, $sqlQuery)) {
 <?php
 
 }else{
-    echo "Error: " . $sqlQuery . "<br>" . mysql_error($connectionKeys);
-    }
+    echo "Database Error! Contact IT Department Immediately.<br>";
+    echo "Error: " . $sqlQuery . "<br>" . mysqli_error($connectionKeys);
+}
     
 mysqli_close($connectionKeys);
-
-/*
-References
-
-move_uploaded_file($_FILES['imageUpload']['tmp_name'], "images/".$_FILES['imageUpload']["name"]);
-https://stackoverflow.com/questions/46723424/how-to-upload-image-to-database-using-php-undefined-indeximages
-
-https://meeraacademy.com/php-code-for-image-upload-and-display/
-
-#https://www.w3schools.com/php/php_mysql_connect.asp
-*/
 
 ?>
 

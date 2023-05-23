@@ -1,27 +1,29 @@
+<?php
+  session_start();
+
+    if(!isset($_SESSION['username'])){
+        header('location:../homepage.php');
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 </html>
 <head>
-<link rel="stylesheet" href="Admin/designFilesAndImages/newsFeedSystemDesign.css">
-  <link rel="stylesheet" href="css/homepage.css">
+  <link rel="stylesheet" href="designFilesAndImages/newsFeedSystemDesign.css">
 </head>
 <body>
 
+<center><img src="designFilesAndImages/logo.png" class="logo"></center>
 
+<ul>
+      <li><a  class="active"  href="newsFeedSystem.php">View Books Registered in the Archives</a></li> 
+      <li><a  class="notActive" href="AddNews.php">Add News/Event</a></li>
+      <li><a  class="logOut" href="../Php/logout.php">Log Out</a></li>
+</ul>
 
-<img src="photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
-  <ul>
-    <div class="leftlinks">
-    <li><a href="homepage.php">Home</a></li>
-    <li><a href="display/Courtyard.php">Rooms</a></li>
-    <li><a href="Public_newsfeed.php">News Feed</a></li>
-    <li><a href="#about">About</a></li>
-  </div>
-    <li style="float:right;"><a href="login_Prompt.php">Login</a></li>
-  </ul>
-
-
-  <br>
+<br>
 <br>
 <br>
 <br>
@@ -45,7 +47,7 @@
   </tr>
 
 <?php
-include("Admin/databaseConnect.php");
+include("databaseConnect.php");
 
 $sqlQuery = "SELECT id, Title, NEDate, Description, Image FROM newseventtable";
 $result = mysqli_query($connectionKeys, $sqlQuery);
@@ -60,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
    <td><center><?php echo $data['Title']; ?></center></td>
    <td><center><?php echo $data['NEDate']; ?></center></td>
    <td><center><?php echo $data['Description']; ?></center></td>
-   <td><center><?php echo "<img src= \"Admin/images/" . $data['Image'] ."\" height=200 width=250 />"; ?></center></td>
+   <td><center><?php echo "<img src= 'images/" . $data['Image'] ."' height=200 width=250 />"; ?></center></td>
    <td>
       <a href="deleteARow.php?rowID=<?php echo $data['id'];?>">Delete</a>
    </td>
