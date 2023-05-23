@@ -68,7 +68,7 @@ echo "</div>";
 
   <img src="../photos/beach.jpg" width="100%" height="628px">
 
-  <a href="Rate.php" class="ratebutton" <?php echo $disable?>>Rate</a>
+
   
   <a href="chat.php" class="chatbutton"><i class='far fa-comment-dots' >Chat</i></a>
 

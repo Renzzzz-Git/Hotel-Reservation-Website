@@ -1,21 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hotel Filter</title>
-    <style>
+
+  <style>
+
+        /*-------------------------NAV BAR---------------------*/
+        
+
+    .navbar {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2A1B0E;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 90px;
+   
+  }
+  
+  
+  
+  .navlink {
+    float: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 16px;
+   
+  }
+  
+  li a:hover:not(.active) {
+    color: goldenrod;
+  }
+  
+  .active {
+    color: goldenrod;
+  }
+  
+  
+  
+  .leftlinks{
+    margin-left: 130px;
+  }
+
+
+
+
+
+        /*-----------------------FORM--------------------------*/
         form {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 5px;
             max-width: 800px;
             margin: 0 auto;
+            margin-top:40px;
+
+            
         }
 
         label {
             flex: 0 0 100px;
             text-align: right;
-            margin-right: 10px;
+            margin-right: 5px;
+            font-family:arial;
         }
 
         select {
@@ -38,10 +97,36 @@
             font-size: 16px;
         }
 
+        h2{
+            margin-left:603px;
+            margin-top:100px;
+            font-family:arial;
+            color:darkgreen;
+        }
+
+        .roomlist{
+            color:green;
+        }
+
+        ul{
+        
+            margin-left:580px;
+            margin-right:580px;
+            font-family:arial;
+            font-weight:bold;
+            font-size:16px;
+            color:black;
+
+        }
+
+       
+
     </style>
-    <link rel="stylesheet" href="css/courtyardRoomDisplay.css">
+<link rel="stylesheet" href="../../css/homepage.css">
 </head>
 <body>
+
+<!---------------------------------------------NAV BAR-------------------------------------------------------->
 
 <img src="../../photos/logo.png" style="width: 160px; height: 100px;position: absolute;top: 10px;left: 15px">
 <ul>
@@ -57,7 +142,10 @@
     <li style="float:right;"><a href="Filter.php">Filter</a></li>
   </ul>
 
-<form method="POST">
+  <!----------------------------------------FILTER------------------------------------------------------------>
+
+
+  <form method="POST">
     <label for="room-type">Room Type:</label>
     <select id="room-type" name="room-type"> 
         <option value="">Any</option>
@@ -100,6 +188,7 @@
 </form>
 </body>
 </html>
+
 <?php
 
 //Connect to database
@@ -125,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $priceRange = isset($_POST['price-range']) ? $_POST['price-range'] : '';
 
     // Prepare the SQL statement
-    $sql = "SELECT room_name, room_number FROM Room WHERE ";
+    $sql = "SELECT room_name, room_number, bed_type, occupancy, price FROM Room WHERE ";
     $conditions = array();
     $parameters = array(); // Initialize the parameters array
 
@@ -193,20 +282,24 @@ $roomNames = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Output the filtered room names
 if (!empty($roomNames)) {
-    echo "<h2>Filtered Rooms:</h2>";
-    echo "<ul>";
+    echo "<h2></h2>";
+    echo '<table style="margin: 0 auto; text-align: center; border-collapse: collapse; border: 1px solid #ddd; font-family: Arial;">';
+    echo '<tr><th style="border: 1px solid #ddd; padding: 8px;">Room Name</th><th style="border: 1px solid #ddd; padding: 8px;">Room Number</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">Bed Type</th><th style="border: 1px solid #ddd; padding: 8px;">Occupancy</th><th style="border: 1px solid #ddd; padding: 8px;">Price</th></tr>';
     foreach ($roomNames as $room) {
         $roomNumber = $room['room_number'];
         $roomName = $room['room_name'];
-        echo "<br> <li>$roomName Room Number: $roomNumber</li> <br>";
+        $bedty = $room['bed_type'];
+        $occu = $room['occupancy'];
+        $pri = $room['price'];
+        echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">'.$roomName.'</td><td style="border: 1px solid #ddd; padding: 8px;">'.$roomNumber.'</td>
+        <td style="border: 1px solid #ddd; padding: 8px;">'.$bedty.'</td><td style="border: 1px solid #ddd; padding: 8px;">'.$occu.'</td><td style="border: 1px solid #ddd; padding: 8px;">'.$pri.'</td></tr>';
     }
-    echo "</ul>";
+    echo '</table>';
 } else {
-    echo "<p>No rooms found with the selected filters.</p>";
+    echo '<p>No rooms found with the selected filters.</p>';
 }
 
 }
 
 ?>
-
-
