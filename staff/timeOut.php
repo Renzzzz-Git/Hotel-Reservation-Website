@@ -61,7 +61,7 @@
     }
     
     $conn->close();
-    header('location:timeClockPage.php');
+    header('location:attendance.php');
 
 
 ?>
