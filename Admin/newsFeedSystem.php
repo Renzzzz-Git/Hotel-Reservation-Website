@@ -18,7 +18,7 @@
 <center><img src="designFilesAndImages/logo.png" class="logo"></center>
 
 <ul>
-      <li><a  class="active"  href="newsFeedSystem.php">View Books Registered in the Archives</a></li> 
+      <li><a  class="active"  href="newsFeedSystem.php">News Feed System</a></li> 
       <li><a  class="notActive" href="AddNews.php">Add News/Event</a></li>
       <li><a  class="logOut" href="../Php/logout.php">Log Out</a></li>
 </ul>
