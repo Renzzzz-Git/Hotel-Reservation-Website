@@ -2,7 +2,7 @@
 <html>
 </html>
 <head>
-<link rel="stylesheet" href="Admin/designFilesAndImages/newsFeedSystemDesign.css">
+  <link rel="stylesheet" href="css/adminAccount.css">
   <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
@@ -20,29 +20,7 @@
     <li style="float:right;"><a href="login_Prompt.php">Login</a></li>
   </ul>
 
-
-  <br>
-<br>
-<br>
-<br>
-
-<div class="tableCenterBox">
-
-<br>
-<br>
-
-<h1><center>News Feed System</center></h1>
-
-<table border ="1" cellspacing="0" cellpadding="10" class="secondTable">
-
-  <tr class="tableHeader">
-    <th width="10%">News/ Event ID</th>
-    <th width="15%">Title</th>
-    <th width="15%">Date</th>
-    <th width="25%">Description</th>
-    <th width="25%">Image</th>
-    <th width="1o%">Action</th>
-  </tr>
+<h1><center>Hotel News and Events</center></h1>
 
 <?php
 include("Admin/databaseConnect.php");
@@ -55,16 +33,13 @@ if (mysqli_num_rows($result) > 0) {
   while($data = mysqli_fetch_assoc($result)) {
 ?>
 
- <tr>
-   <td><center><?php echo $data['id']; ?></center></td>
-   <td><center><?php echo $data['Title']; ?></center></td>
-   <td><center><?php echo $data['NEDate']; ?></center></td>
-   <td><center><?php echo $data['Description']; ?></center></td>
-   <td><center><?php echo "<img src= \"Admin/images/" . $data['Image'] ."\" height=200 width=250 />"; ?></center></td>
-   <td>
-      <a href="deleteARow.php?rowID=<?php echo $data['id'];?>">Delete</a>
-   </td>
- </tr>
+<div class="centerBox">
+
+        <h3><?php echo $data['Title'];?></h3>
+        <h4>Date: <?php echo $data['NEDate'];?></h4>
+        <p align="justify"><?php echo $data['Description'];?></p>
+        <p><center><?php echo"<img src=\"Admin/images/".$data['Image']."\" height=300 width=400 />";?></center></p>
+        <br>
 
 <?php 
   $sn++;                                      }
@@ -72,16 +47,24 @@ if (mysqli_num_rows($result) > 0) {
 } else { 
 ?>
     <tr>
-     <td colspan="6"><h3><center>No data yet</center></h3></td>
+     <td colspan="5"><h3><center>No data yet</center></h3></td>
     </tr>
 
  <?php } 
  ?>
 
- </table>
-
 </div>
-
 </body>
 </html>
 
+<!--
+
+/*
+References
+
+https://codingstatus.com/display-data-in-html-table-using-php-mysql/
+https://www.w3schools.com/php/php_mysql_delete.asp
+
+*/
+
+-->

@@ -61,7 +61,7 @@ echo "</div>";
 
 <?php
   //????
-  include("Admin/code for establishing connection to the sql database.php");
+  include("Admin/databaseConnect.php");
 ?>
 </body>
 </html>
